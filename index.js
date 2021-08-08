@@ -11,4 +11,14 @@
     camera.rotation.x = 1.16;
     camera.rotation.y = -0.12;
     camera.rotation.z = 0.27;
+
+    let ambient = new THREE.AmbientLight(0x555555);
+    scene.add(ambient);
+
+    renderer = new THREE.WebGLRenderer();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    scene.fog = new THREE.FogExp2(0x03554e, 0.001);
+    renderer.setClearColor(scene.fog.color);
+    
+
   }
